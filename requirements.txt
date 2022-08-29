@@ -1,5 +1,5 @@
 datetime
-pywin32
+pypiwin32
 streamlit
 xlwings
 numpy
