@@ -1,5 +1,5 @@
 datetime
-pypiwin32
+yagmail
 streamlit
 xlwings
 numpy
