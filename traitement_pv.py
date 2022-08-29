@@ -2,7 +2,6 @@ import datetime as dt
 import numpy as np
 import os
 import streamlit
-import win32com.client
 import xlwings as xw
 
 
@@ -139,13 +138,3 @@ class PV:
         wk.close()
         return pv_to_pdf
 
-    def send_mail(self, fichier_à_attaché):
-        """ Send the pv by mail"""
-        outlook = win32com.client.Dispatch('outlook.application')
-        mail = outlook.CreateItem(0)
-        mail.To = self.destinataire
-        mail.Subject = self.sujet_email
-        mail.Body = self.contenu_email
-        mail.Attachments.Add(fichier_à_attaché)
-        mail.Display()
-        #sheet1.range((localis+13,loc+2)).value = "pv envoyé le:" + dateCompletDuJour
